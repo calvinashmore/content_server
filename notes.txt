@@ -1,0 +1,4 @@
+
+To auth:
+gcloud auth application-default login
+assigns default credentials

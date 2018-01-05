@@ -1,0 +1,10 @@
+
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+package content_server.proto;
+
+extend google.protobuf.FileOptions {
+  string dart_package = 50001;
+}

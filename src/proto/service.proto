@@ -1,0 +1,25 @@
+
+syntax = "proto3";
+
+package content_server.proto;
+
+//import "dart_options.proto";
+import "src/proto/dart_options.proto";
+
+option (dart_package) = "content_server.proto.service";
+
+message Stuff {
+  int32 hello = 1;
+}
+
+service Hello {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
