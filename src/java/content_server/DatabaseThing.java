@@ -7,8 +7,6 @@ public class DatabaseThing {
 
   public void connect() throws Exception {
 
-//    Class.forName("com.google.cloud.sql.mysql.SocketFactory");
-
     String databaseName = "stuff";
     String instanceConnectionName = "primal-gear-188300:us-central1:toast";
     String username = "root";

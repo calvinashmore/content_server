@@ -4,6 +4,10 @@ maven_jar(
   sha1 = "6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9",
 )
 
+maven_jar(
+  name = "com_google_inject_guice",
+  artifact = "com.google.inject:guice:4.0",
+)
 
 maven_jar(
   name =  "com_fasterxml_jackson_core_jackson_core",
@@ -48,6 +52,46 @@ maven_jar(
 maven_jar(
   name = "mysql_mysql_connector_java",
   artifact = "mysql:mysql-connector-java:5.1.38",
+)
+
+maven_jar(
+    name = "org_hibernate_hibernate_core",
+    artifact = "org.hibernate:hibernate-core:5.2.12.Final",
+)
+
+maven_jar(
+    name = "org_hibernate_common_hibernate_commons_annotations",
+    artifact = "org.hibernate.common:hibernate-commons-annotations:5.0.1.Final",
+)
+
+maven_jar(
+    name = "org_hibernate_javax_persistence_hibernate_jpa",
+    artifact = "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final",
+)
+
+maven_jar(
+    name = "org_jboss_logging_jboss_logging",
+    artifact = "org.jboss.logging:jboss-logging:3.3.1.Final",
+)
+
+maven_jar(
+    name = "javax_transaction_jta",
+    artifact = "javax.transaction:jta:1.1",
+)
+
+maven_jar(
+    name = "dom4j_dom4j",
+    artifact = "dom4j:dom4j:1.6.1",
+)
+
+maven_jar(
+    name = "com_fasterxml_classmate",
+    artifact = "com.fasterxml:classmate:1.3.4",
+)
+
+maven_jar(
+    name = "javax_persistence_javax_persistence_api",
+    artifact = "javax.persistence:javax.persistence-api:2.2",
 )
 
 http_archive(
