@@ -1,5 +1,10 @@
 package content_server;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import content_server.db.DatabaseModule;
+import content_server.model.ModelModule;
+import content_server.model.ThingModel;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
@@ -17,7 +22,15 @@ public class ServerLauncher {
 //    server.start();
 //    server.blockUntilShutdown();
 
-    new DatabaseThing().connect();
+//    new DatabaseThing().connect();
+
+
+    Injector injector = Guice.createInjector(new DatabaseModule(), new ModelModule());
+    ThingModel thingModel = injector.getInstance(ThingModel.class);
+
+    thingModel.putThing(10, "eek");
+
+    System.exit(0);
   }
 
 

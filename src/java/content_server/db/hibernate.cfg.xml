@@ -6,6 +6,10 @@
     <session-factory>
         <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>-->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL57InnoDBDialect</property>
+        <property name="hibernate.connection.socketFactory">com.google.cloud.sql.mysql.SocketFactory</property>
+        <property name="hibernate.connection.url">jdbc:mysql://google/stuff?cloudSqlInstance=primal-gear-188300:us-central1:toast</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">rootrootroot</property>
 
         <mapping class="content_server.db.entity.ThingEntity"/>
     </session-factory>

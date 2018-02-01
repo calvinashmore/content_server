@@ -16,6 +16,5 @@ public class SchemaExporter {
     MetadataSources metadataSources = new MetadataSources(registryBuilder.build());
 
     schemaExport.execute(EnumSet.of(TargetType.STDOUT), SchemaExport.Action.BOTH, metadataSources.buildMetadata());
-
   }
 }

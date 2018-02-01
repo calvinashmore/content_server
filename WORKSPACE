@@ -10,6 +10,63 @@ maven_jar(
 )
 
 maven_jar(
+  name = "javax_inject_javax_inject",
+  artifact = "javax.inject:javax.inject:1",
+)
+
+maven_jar(
+  name = "aopalliance_aopalliance",
+  artifact = "aopalliance:aopalliance:1.0",
+)
+
+
+maven_jar(
+  name = "javassist_javassist",
+  artifact = "javassist:javassist:3.12.1.GA",
+)
+
+#maven_jar(
+#  name = "org_antlr_antlr_runtime",
+#  artifact = "org.antlr:antlr-runtime:3.5.2",
+#)
+
+http_jar(
+    name = "antlr",
+    url = "http://www.antlr3.org/download/antlr-3.5.2-complete.jar",
+)
+
+
+#maven_jar(
+#    name = "com_google_auto_value_auto_value",
+#    artifact = "com.google.auto.value:auto-value:1.5.3",
+#)
+
+new_http_archive(
+    name = "auto_value",
+    url = "http://repo1.maven.org/maven2/com/google/auto/value/auto-value/1.5.3/auto-value-1.5.3.jar",
+    build_file_content = """
+java_import(
+    name = "jar",
+    jars = ["auto-value-1.5.3.jar"],
+)
+
+java_plugin(
+    name = "autovalue-plugin",
+    generates_api = 1,
+    processor_class = "com.google.auto.value.processor.AutoValueProcessor",
+    deps = [":jar"],
+)
+
+java_library(
+    name = "processor",
+    exported_plugins = [":autovalue-plugin"],
+    exports = [":jar"],
+    visibility = ["//visibility:public"],
+)
+""",
+)
+
+maven_jar(
   name =  "com_fasterxml_jackson_core_jackson_core",
   artifact = "com.fasterxml.jackson.core:jackson-core:2.9.3",
 )
