@@ -8,18 +8,24 @@ import "src/proto/dart_options.proto";
 
 option (dart_package) = "content_server.proto.service";
 
-message Stuff {
-  int32 hello = 1;
-}
-
 service Hello {
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc PutThing (PutThingRequest) returns (PutThingResponse) {}
+  rpc GetThing (GetThingRequest) returns (GetThingResponse) {}
 }
 
-message HelloRequest {
-  string name = 1;
+message PutThingRequest {
+  int64 id = 1;
+  string thing = 2;
 }
 
-message HelloReply {
-  string message = 1;
+message PutThingResponse {
+  string old_value = 1;
+}
+
+message GetThingRequest {
+  int64 id = 1;
+}
+
+message GetThingResponse {
+  string thing = 1;
 }

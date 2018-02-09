@@ -11,6 +11,7 @@ java_library(
     '@com_google_inject_guice//jar',
     '//src/java/content_server/db',
     '//src/java/content_server/model',
+    '//src/java/content_server/server',
     '//src/proto:service_java_proto',
     '//src/proto:service_java_grpc_proto',
   ],
