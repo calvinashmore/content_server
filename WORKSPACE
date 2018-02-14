@@ -171,7 +171,12 @@ http_archive(
 git_repository(
     name = "grpc_java",
     remote = "git@github.com:grpc/grpc-java.git",
-    tag = "v1.8.0",
+    tag = "v1.9.1",
+)
+
+maven_jar(
+    name = "io_grpc_grpc_services",
+    artifact = "io.grpc:grpc-services:1.9.1",
 )
 
 load("@grpc_java//:repositories.bzl", "grpc_java_repositories")

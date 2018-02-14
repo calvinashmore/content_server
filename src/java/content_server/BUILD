@@ -9,6 +9,7 @@ java_library(
     '@com_google_guava_guava//jar',
     '@com_google_apis_google_api_services_sqladmin//jar',
     '@com_google_inject_guice//jar',
+    '@io_grpc_grpc_services//jar',
     '//src/java/content_server/db',
     '//src/java/content_server/model',
     '//src/java/content_server/server',

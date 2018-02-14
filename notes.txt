@@ -2,3 +2,6 @@
 To auth:
 gcloud auth application-default login
 assigns default credentials
+
+grpc_cli call localhost:50051 content_server.proto.Hello.PutThing "id: 111 thing: 'ohno'"
+grpc_cli call localhost:50051 content_server.proto.Hello.GetThing "id: 111"
